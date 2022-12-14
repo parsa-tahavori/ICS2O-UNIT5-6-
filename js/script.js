@@ -1,7 +1,7 @@
-// Copyright (c) 2020 Mr. Coxall All rights reserved
+// Copyright (c) 2022 Parsa Tahavori All rights reserved
 //
-// Created by: Mr. Coxall
-// Created on: Sep 2020
+// Created by: Parsa Tahavori
+// Created on: Dec 2022
 // This file contains the JS functions for index.html
 
 "use strict"
@@ -16,8 +16,19 @@ if (navigator.serviceWorker) {
 }
 
 /**
- * This function displays an alert.
+ * this function
  */
 function myButtonClicked() {
-  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
+  const num1 = parseFloat(document.getElementById("num1").value)
+  const num2 = parseFloat(document.getElementById("num2").value)
+
+  let count = 0
+  let sum = 0
+
+  while (count < num2) {
+    sum += num1
+    count++
+  }
+
+  document.getElementById("answer").innerHTML = "your answer is: " + sum + "."
 }
